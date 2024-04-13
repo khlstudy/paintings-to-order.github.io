@@ -6,31 +6,93 @@
     <title>Галерея</title>
   </head>
   <body link="#683c25" alink="#683c25" vlink="#683c25" text="#683c25">
-    <!-- nav -->
-    <a href="index.html" title="Перейти на головну сторінку"
-      >Головна сторінка</a
-    >
-    <a href="gallery.html" title="Переглянути галерею">Галерея</a>
-    <a href="lessons.html" title="Записатись на заняття">Заняття</a>
-    <a href="order.html" title="Оформити замовлення">Замовлення</a>
     <!-- gallery -->
     <h2>Види картин</h2>
-    <p>Натюрморти, портрети, абстракції, пейзажі.</p>
-    <p>Виконання у техніках: реалізм, пастозний і декоративний живопис.</p>
-    <p>
-      Матеріали: олійні й акрилові фарби, поталь, текстурна паста, акварель.
-    </p>
+    <ul>
+      <li>Натюрморти</li>
+      <li>Портрети</li>
+      <li>Абстракції</li>
+      <li>Пейзажі</li>
+    </ul>
+    <p>Виконання у техніках:</p>
+    <ol>
+      <li>Реалізм</li>
+      <li>Пастозний живопис</li>
+      <li>Декоративний живопис</li>
+    </ol>
+    <p>Матеріали:</p>
+    <ol type="a">
+      <li>Олійні фарби</li>
+      <li>Акрилові фарби</li>
+      <li>Поталь</li>
+      <li>Текстурна паста</li>
+      <li>Акварель</li>
+    </ol>
     <p>Будь-який розмір полотна.</p>
-    <!-- swiper -->
-    <img
-      src="./images/still-life1.jpg"
-      width="600px"
-      height="400px"
-      alt="still life art"
-    />
+    <table>
+      <caption>
+        Галерея
+      </caption>
+      <tbody>
+        <tr>
+          <td>
+            <img
+              src="./images/still-life1.jpg"
+              width="300px"
+              height="200px"
+              alt="still life art"
+            />
+          </td>
+          <td>
+            <img
+              src="./images/abstraction1.jpg"
+              width="300px"
+              height="200px"
+              alt="abstraction1"
+            />
+          </td>
+          <td>
+            <img
+              src="./images/abstraction2.jpg"
+              width="300px"
+              height="200px"
+              alt="abstraction2"
+            />
+          </td>
+          <td>
+            <img
+              src="./images/landscape1.jpg"
+              width="300px"
+              height="200px"
+              alt="landscape1S"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">Натюрморт</td>
+          <td colspan="2" align="center">Абстракції</td>
+          <td align="center">Пейзаж</td>
+        </tr>
+      </tbody>
+    </table>
     <a href="https://www.youtube.com/shorts/ta6d6SutdWE?feature=share"
       >youtube video</a
     >
+    <!-- video and audio -->
+    <div class="pos">
+      <video controls poster="./images/poster-video.png" width="200">
+        <source src="./media/video-art.mp4" type="video/mp4" />
+      </video>
+      <p>Музика для творчого, позитивного настрою</p>
+      <audio controls>
+        <source src="./media/20210616-Mac-DeMarco.mp3" />
+      </audio>
+      <p>Автор пісні: Mac DeMarco</p>
+    </div>
+    <!-- return  -->
+    <a href="index.html" title="На головну сторінку">
+      <img src="./images/undo.png" alt="Стрілка назад" width="100px" />
+    </a>
     <!-- footer -->
     <h2>NadiN</h2>
     <img src="./images/footer-decoration.png" alt="art footer decoration" />
