@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Дизайнерське меню</title>
+    <title>Картини на замовлення</title>
     <meta name="description" content="Картини на замовлення, ручної роботи" />
     <meta
       name="keywords"
@@ -14,28 +14,178 @@
     <meta name="description" lang="en" content="Pictures to order, handmade" />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Type" content="text/html; charset=windows1251" />
-    <link rel="stylesheet" href="./style.css" />
+    <!-- Link -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- desing menu -->
-    <div class="pos">
-      <a href="info.html" title="Перейти на інформаційну сторінку"
-        ><img src="./images/info.png" alt="Інфо" width="100px"
-      /></a>
-      <a href="gallery.html" title="Переглянути галерею">
-        <img src="./images/picture.png" alt="Галерея" width="100px" />
-      </a>
-      <br />
-      <a href="lessons.html" title="Записатись на заняття">
-        <img src="./images/marker.png" alt="Локація" width="100px" />
-      </a>
-      <a href="order.html" title="Оформити замовлення">
-        <img
-          src="./images/circle-phone-flip.png"
-          alt="Оформити замовлення"
-          width="100px"
-        />
-      </a>
+    <div class="wrapper">
+      <header class="header gallery-header">
+        <div class="header__container">
+          <a href="#" class="logo">NadiN</a>
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="index.html" title="Перейти на головну сторінку"
+                  >Головна</a
+                >
+              </li>
+              <li class="menu__item">
+                <a href="gallery.html" title="Переглянути галерею">Галерея</a>
+              </li>
+              <li class="menu__item">
+                <a href="lessons.html" title="Записатись на заняття">Заняття</a>
+              </li>
+              <li class="menu__item">
+                <a href="order.html" title="Оформити замовлення">Замовлення</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="page">
+        <section class="page__main main">
+          <div class="main__content">
+            <h1 class="main__title">Картини на <br />замовлення</h1>
+          </div>
+        </section>
+        <section class="page__advantages advantages">
+          <div class="advantages__container">
+            <h2 class="advantages__title title">Наші переваги</h2>
+            <div class="advantages__items">
+              <div class="advantages__item item-advantages">
+                <img
+                  class="item-advantages__icon"
+                  src="./images/paint-palette.png"
+                  width="200px"
+                  height="200px"
+                  alight="left"
+                  alt="paint palette"
+                />
+                <h2 class="item-advantages__title">Ручна робота</h2>
+                <p>Всі картини малюються художницею</p>
+              </div>
+              <div class="advantages__item item-advantages">
+                <img
+                  class="item-advantages__icon"
+                  src="./images/abstract-art.png"
+                  width="200px"
+                  height="200px"
+                  alight="middle"
+                  alt="abstract art"
+                />
+                <h2 class="item-advantages__title">Ваш вибір</h2>
+                <p>Замовляйте будь-яке зображення і його відтворять!</p>
+              </div>
+              <div class="advantages__item item-advantages">
+                <img
+                  class="item-advantages__icon"
+                  src="./images/box.png"
+                  alt="Box delivery"
+                />
+                <h2 class="item-advantages__title">Доставка</h2>
+                <p>
+                  Доставка Укр поштою, <br />
+                  Новою поштою, <br />самовивіз
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__body body-footer">
+            <a class="body-footer__logo logo">NadiN</a>
+            <div class="body-footer__column">
+              <h2 class="menu-footer__title">Контакти</h2>
+              <ul class="body-footer__contacts contacts-footer">
+                <li class="contacts-footer__item">
+                  <a
+                    class="contacts-footer__link"
+                    href="mailto:NadiNart@gmail.com"
+                    class="contacts-footer__link"
+                    ><i>NadiNart@gmail.com</i></a
+                  >
+                </li>
+                <li class="contacts-footer__item">
+                  <a class="contacts-footer__link" href="tel:+380960000007"
+                    ><i>+ 38 (096) 000 00 07</i></a
+                  >
+                </li>
+                <li class="contacts-footer__item">
+                  <a
+                    class="contacts-footer__link"
+                    href="https://maps.app.goo.gl/LQeBobDStSp6v9aM7"
+                    target="_blank"
+                    ><i>Україна, м. Дніпро, вул. Павла Нірінберга, 10</i></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="body-footer__column body-footer__column_full">
+              <nav class="menu-footer__column menu-footer">
+                <div class="body-footer__column">
+                  <h2 class="menu-footer__title">Сторінки</h2>
+                  <ul class="menu-footer__list">
+                    <li class="menu-footer__item item-ref">
+                      <a
+                        class="item-ref"
+                        href="index.html"
+                        title="Перейти на головну сторінку"
+                        >Головна</a
+                      >
+                    </li>
+                    <li class="menu-footer__item">
+                      <a
+                        class="item-ref"
+                        href="gallery.html"
+                        title="Переглянути галерею"
+                        >Галерея</a
+                      >
+                    </li>
+                    <li class="menu-footer__item">
+                      <a
+                        class="item-ref"
+                        href="lessons.html"
+                        title="Записатись на заняття"
+                        >Заняття</a
+                      >
+                    </li>
+                    <li class="menu-footer__item">
+                      <a
+                        class="item-ref"
+                        href="order.html"
+                        title="Оформити замовлення"
+                        >Замовлення</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <div class="body-footer__column">
+              <div class="body-footer__social social-footer">
+                <div class="social-footer__title">Соц. мережі</div>
+                <div class="social-footer__items">
+                  <a
+                    href="https://www.instagram.com/"
+                    class="social-footer__item"
+                  >
+                    <img src="./images/instagram-logo.svg" alt="Instagram" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com"
+                    class="social-footer__item"
+                  >
+                    <img src="./images/facebook-logo.svg" alt="Facebook" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copy">© 2024 Всі права захищені</div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

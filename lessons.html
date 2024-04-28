@@ -4,16 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Заняття</title>
+    <!-- Link -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body link="#683c25" alink="#683c25" vlink="#683c25" text="#683c25">
-    <!-- header -->
-    <img
-      src="./images/lessons-background.jpg"
-      width="1200px"
-      height="400px"
-      alt="picture with sakura"
-    />
-    <h1>Твори власноруч</h1>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <img
+          src="./images/lessons-background.jpg"
+          width="1200px"
+          height="400px"
+          alt="picture with sakura"
+        />
+        <h1>Твори власноруч</h1>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="index.html" title="Перейти на головну сторінку"
+                >Головна</a
+              >
+            </li>
+            <li class="menu__item">
+              <a href="gallery.html" title="Переглянути галерею">Галерея</a>
+            </li>
+            <li class="menu__item">
+              <a href="lessons.html" title="Записатись на заняття">Заняття</a>
+            </li>
+            <li class="menu__item">
+              <a href="order.html" title="Оформити замовлення">Замовлення</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <!-- lessons -->
     <h2>Заняття з викладачкою</h2>
     <p>
@@ -22,10 +45,6 @@
     </p>
     <!-- iframe -->
     <p>iframe with google maps must be here</p>
-    <!-- return  -->
-    <a href="index.html" title="На головну сторінку">
-      <img src="./images/undo.png" alt="Стрілка назад" width="100px" />
-    </a>
     <!-- footer -->
     <h2>NadiN</h2>
     <img src="./images/footer-decoration.png" alt="art footer decoration" />

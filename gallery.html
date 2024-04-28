@@ -4,102 +4,181 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Галерея</title>
+    <!-- Link -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body link="#683c25" alink="#683c25" vlink="#683c25" text="#683c25">
-    <!-- gallery -->
-    <h2>Види картин</h2>
-    <ul>
-      <li>Натюрморти</li>
-      <li>Портрети</li>
-      <li>Абстракції</li>
-      <li>Пейзажі</li>
-    </ul>
-    <p>Виконання у техніках:</p>
-    <ol>
-      <li>Реалізм</li>
-      <li>Пастозний живопис</li>
-      <li>Декоративний живопис</li>
-    </ol>
-    <p>Матеріали:</p>
-    <ol type="a">
-      <li>Олійні фарби</li>
-      <li>Акрилові фарби</li>
-      <li>Поталь</li>
-      <li>Текстурна паста</li>
-      <li>Акварель</li>
-    </ol>
-    <p>Будь-який розмір полотна.</p>
-    <table>
-      <caption>
-        Галерея
-      </caption>
-      <tbody>
-        <tr>
-          <td>
-            <img
-              src="./images/still-life1.jpg"
-              width="300px"
-              height="200px"
-              alt="still life art"
-            />
-          </td>
-          <td>
-            <img
-              src="./images/abstraction1.jpg"
-              width="300px"
-              height="200px"
-              alt="abstraction1"
-            />
-          </td>
-          <td>
-            <img
-              src="./images/abstraction2.jpg"
-              width="300px"
-              height="200px"
-              alt="abstraction2"
-            />
-          </td>
-          <td>
-            <img
-              src="./images/landscape1.jpg"
-              width="300px"
-              height="200px"
-              alt="landscape1S"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td align="center">Натюрморт</td>
-          <td colspan="2" align="center">Абстракції</td>
-          <td align="center">Пейзаж</td>
-        </tr>
-      </tbody>
-    </table>
-    <a href="https://www.youtube.com/shorts/ta6d6SutdWE?feature=share"
-      >youtube video</a
-    >
-    <!-- video and audio -->
-    <div class="pos">
-      <video controls poster="./images/poster-video.png" width="200">
-        <source src="./media/video-art.mp4" type="video/mp4" />
-      </video>
-      <p>Музика для творчого, позитивного настрою</p>
-      <audio controls>
-        <source src="./media/20210616-Mac-DeMarco.mp3" />
-      </audio>
-      <p>Автор пісні: Mac DeMarco</p>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="#" class="logo gallery-logo">NadiN</a>
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a
+                  class="gallery-ref"
+                  href="index.html"
+                  title="Перейти на головну сторінку"
+                  >Головна</a
+                >
+              </li>
+              <li class="menu__item">
+                <a
+                  class="gallery-ref"
+                  href="gallery.html"
+                  title="Переглянути галерею"
+                  >Галерея</a
+                >
+              </li>
+              <li class="menu__item">
+                <a
+                  class="gallery-ref"
+                  href="lessons.html"
+                  title="Записатись на заняття"
+                  >Заняття</a
+                >
+              </li>
+              <li class="menu__item">
+                <a
+                  class="gallery-ref"
+                  href="order.html"
+                  title="Оформити замовлення"
+                  >Замовлення</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="page">
+        <section class="page__gallery gallery">
+          <div class="gallery__container">
+            <div class="galerry__column">
+              <h2 class="gallery__title">Види картин</h2>
+              <p class="gallery_text">
+                Натюрморти, портрети, абстракції, пейзажі.
+              </p>
+              <p class="gallery_text">
+                Виконання у техніках: реалізм, пастозний і декоративний живопис.
+              </p>
+              <p class="gallery_text">
+                Матеріали: олійні й акрилові фарби, поталь, текстурна паста,
+                акварель.
+              </p>
+              <p class="gallery_text">Будь-який розмір полотна.</p>
+            </div>
+            <div class="galerry__column">
+              <!-- swiper -->
+              <img
+                src="./images/still-life1.jpg"
+                width="600px"
+                height="400px"
+                alt="still life art"
+              />
+            </div>
+            <div class="galerry__column">
+              <!-- video -->
+              <video controls poster="./images/poster-video.png" width="200">
+                <source src="./media/video-art.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__body body-footer">
+            <a class="body-footer__logo logo">NadiN</a>
+            <div class="body-footer__column">
+              <h2 class="menu-footer__title">Контакти</h2>
+              <ul class="body-footer__contacts contacts-footer">
+                <li class="contacts-footer__item">
+                  <a
+                    class="contacts-footer__link"
+                    href="mailto:NadiNart@gmail.com"
+                    class="contacts-footer__link"
+                    ><i>NadiNart@gmail.com</i></a
+                  >
+                </li>
+                <li class="contacts-footer__item">
+                  <a class="contacts-footer__link" href="tel:+380960000007"
+                    ><i>+ 38 (096) 000 00 07</i></a
+                  >
+                </li>
+                <li class="contacts-footer__item">
+                  <a
+                    class="contacts-footer__link"
+                    href="https://maps.app.goo.gl/LQeBobDStSp6v9aM7"
+                    target="_blank"
+                    ><i>Україна, м. Дніпро, вул. Павла Нірінберга, 10</i></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="body-footer__column body-footer__column_full">
+              <nav class="menu-footer__column menu-footer">
+                <div class="body-footer__column">
+                  <h2 class="menu-footer__title">Сторінки</h2>
+                  <ul class="menu-footer__list">
+                    <li class="menu-footer__item item-ref">
+                      <a
+                        class="item-ref"
+                        href="index.html"
+                        title="Перейти на головну сторінку"
+                        >Головна</a
+                      >
+                    </li>
+                    <li class="menu-footer__item">
+                      <a
+                        class="item-ref"
+                        href="gallery.html"
+                        title="Переглянути галерею"
+                        >Галерея</a
+                      >
+                    </li>
+                    <li class="menu-footer__item">
+                      <a
+                        class="item-ref"
+                        href="lessons.html"
+                        title="Записатись на заняття"
+                        >Заняття</a
+                      >
+                    </li>
+                    <li class="menu-footer__item">
+                      <a
+                        class="item-ref"
+                        href="order.html"
+                        title="Оформити замовлення"
+                        >Замовлення</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <div class="body-footer__column">
+              <div class="body-footer__social social-footer">
+                <div class="social-footer__title">Соц. мережі</div>
+                <div class="social-footer__items">
+                  <a
+                    href="https://www.instagram.com/"
+                    class="social-footer__item"
+                  >
+                    <img src="./images/instagram-logo.svg" alt="Instagram" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com"
+                    class="social-footer__item"
+                  >
+                    <img src="./images/facebook-logo.svg" alt="Facebook" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copy">© 2024 Всі права захищені</div>
+        </div>
+      </footer>
     </div>
-    <!-- return  -->
-    <a href="index.html" title="На головну сторінку">
-      <img src="./images/undo.png" alt="Стрілка назад" width="100px" />
-    </a>
-    <!-- footer -->
-    <h2>NadiN</h2>
-    <img src="./images/footer-decoration.png" alt="art footer decoration" />
-    <a href="tel:+380960000007"><i>+ 38 (096) 000 00 07</i></a>
-    <a href="mailto:NadiNart@gmail.com"><i>NadiNart@gmail.com</i></a>
-    <a href="https://maps.app.goo.gl/LQeBobDStSp6v9aM7" target="_blank"
-      >Україна, м. Дніпро, вул. Павла Нірінберга, 10</a
-    >
   </body>
 </html>
