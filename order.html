@@ -10,36 +10,194 @@
   <body>
     <header class="header">
       <div class="header__container">
+        <a href="#" class="logo gallery-logo">NadiN</a>
         <nav class="header__menu menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a href="index.html" title="Перейти на головну сторінку"
+              <a
+                class="gallery-ref"
+                href="index.html"
+                title="Перейти на головну сторінку"
                 >Головна</a
               >
             </li>
             <li class="menu__item">
-              <a href="gallery.html" title="Переглянути галерею">Галерея</a>
+              <a
+                class="gallery-ref"
+                href="gallery.html"
+                title="Переглянути галерею"
+                >Галерея</a
+              >
             </li>
             <li class="menu__item">
-              <a href="lessons.html" title="Записатись на заняття">Заняття</a>
+              <a
+                class="gallery-ref"
+                href="lessons.html"
+                title="Записатись на заняття"
+                >Заняття</a
+              >
             </li>
             <li class="menu__item">
-              <a href="order.html" title="Оформити замовлення">Замовлення</a>
+              <a
+                class="gallery-ref"
+                href="order.html"
+                title="Оформити замовлення"
+                >Замовлення</a
+              >
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <!-- inputs -->
-    <p>inputs must be here</p>
-    <p>Надсилаючи форму, я погоджуюсь на обробку персональних даних</p>
-    <!-- footer -->
-    <h2>NadiN</h2>
-    <img src="./images/footer-decoration.png" alt="art footer decoration" />
-    <a href="tel:+380960000007"><i>+ 38 (096) 000 00 07</i></a>
-    <a href="mailto:NadiNart@gmail.com"><i>NadiNart@gmail.com</i></a>
-    <a href="https://maps.app.goo.gl/LQeBobDStSp6v9aM7" target="_blank"
-      >Україна, м. Дніпро, вул. Павла Нірінберга, 10</a
-    >
+    <main class="page">
+      <section class="page__order">
+        <div class="order__container">
+          <div class="orders__texts">
+            <h2 class="order__title">Оформити замовлення картини</h2>
+            <p class="order__text">Заповни форму, щоб ми звʼязались з тобою!</p>
+          </div>
+          <div class="order__content">
+            <form name="order__form" autocomplete="off">
+              <div class="input">
+                <label class="input__label hide-element" for="user-name"
+                  >Ім'я</label
+                >
+                <input
+                  class="input__control"
+                  type="text"
+                  name="user-name"
+                  id="user-name"
+                  placeholder="Ім'я"
+                />
+              </div>
+              <div class="input">
+                <label class="input__label hide-element" for="user-tel"
+                  >Телефон</label
+                >
+                <input
+                  class="input__control"
+                  type="text"
+                  name="user-tel"
+                  id="user-tel"
+                  placeholder="Телефон"
+                />
+              </div>
+              <div class="input">
+                <label class="input__label hide-element" for="user-email"
+                  >Електронна пошта</label
+                >
+                <input
+                  class="input__control"
+                  type="text"
+                  name="user-email"
+                  id="user-enmail"
+                  placeholder="Електронна пошта"
+                />
+              </div>
+              <button class="button" type="submit">Замовити дзвінок</button>
+              <p class="order__agree">
+                Надсилаючи форму, я погоджуюсь на обробку персональних даних
+              </p>
+            </form>
+            <img
+              class="order__image"
+              src="./images/portrait1.jpg"
+              alt="Portrait1"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__body body-footer">
+          <a class="body-footer__logo logo">NadiN</a>
+          <div class="body-footer__column">
+            <h2 class="menu-footer__title">Контакти</h2>
+            <ul class="body-footer__contacts contacts-footer">
+              <li class="contacts-footer__item">
+                <a
+                  class="contacts-footer__link"
+                  href="mailto:NadiNart@gmail.com"
+                  class="contacts-footer__link"
+                  ><i>NadiNart@gmail.com</i></a
+                >
+              </li>
+              <li class="contacts-footer__item">
+                <a class="contacts-footer__link" href="tel:+380960000007"
+                  ><i>+ 38 (096) 000 00 07</i></a
+                >
+              </li>
+              <li class="contacts-footer__item">
+                <a
+                  class="contacts-footer__link"
+                  href="https://maps.app.goo.gl/LQeBobDStSp6v9aM7"
+                  target="_blank"
+                  ><i>Україна, м. Дніпро, вул. Павла Нірінберга, 10</i></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="body-footer__column body-footer__column_full">
+            <nav class="menu-footer__column menu-footer">
+              <div class="body-footer__column">
+                <h2 class="menu-footer__title">Сторінки</h2>
+                <ul class="menu-footer__list">
+                  <li class="menu-footer__item item-ref">
+                    <a
+                      class="item-ref"
+                      href="index.html"
+                      title="Перейти на головну сторінку"
+                      >Головна</a
+                    >
+                  </li>
+                  <li class="menu-footer__item">
+                    <a
+                      class="item-ref"
+                      href="gallery.html"
+                      title="Переглянути галерею"
+                      >Галерея</a
+                    >
+                  </li>
+                  <li class="menu-footer__item">
+                    <a
+                      class="item-ref"
+                      href="lessons.html"
+                      title="Записатись на заняття"
+                      >Заняття</a
+                    >
+                  </li>
+                  <li class="menu-footer__item">
+                    <a
+                      class="item-ref"
+                      href="order.html"
+                      title="Оформити замовлення"
+                      >Замовлення</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="body-footer__column">
+            <div class="body-footer__social social-footer">
+              <div class="social-footer__title">Соц. мережі</div>
+              <div class="social-footer__items">
+                <a
+                  href="https://www.instagram.com/"
+                  class="social-footer__item"
+                >
+                  <img src="./images/instagram-logo.svg" alt="Instagram" />
+                </a>
+                <a href="https://www.facebook.com" class="social-footer__item">
+                  <img src="./images/facebook-logo.svg" alt="Facebook" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copy">© 2024 Всі права захищені</div>
+      </div>
+    </footer>
   </body>
 </html>

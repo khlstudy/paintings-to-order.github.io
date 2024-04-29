@@ -502,3 +502,133 @@ li {
         font-size: 46px;
     }
 }
+
+.page__order{
+    padding-top: 152px;
+}
+
+.order__form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.order__title{
+    margin-bottom: 20px;
+}
+
+.order__text{
+    margin-bottom: 40px;
+}
+.order__container{
+    
+}
+.order__content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.order__image{
+    width: 600px;
+    height: 400px;
+    border-radius: 30px;
+    border: 6px solid #683c25;
+    margin-top: -110px;
+}
+
+.input{
+    position: relative;
+}
+.input__label{
+    position: absolute;
+}
+
+.input__control{
+    padding: 16px 42px;
+    width: 400px; /*100%*/
+    font-size: 16px;
+    line-height: 1.17;
+    border: 1px solid #683c25;
+    border-radius: 8px;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+input:focus{
+    border-color: #c99524;
+    outline: none;
+}
+
+input::placeholder{
+    color: #683c25;
+    font-size: 16px;
+}
+
+input:focus::placeholder{
+    color: #c99524 ;
+}
+
+.hide-element{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.contact-section__form-field {
+    margin-bottom: 24px;
+}
+
+.button{
+    display: block;
+    padding: 16px 32px;
+    color: #fef7ee;
+    background-color: #683c25;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: color .3s;
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    background-color: #c99524;
+}
+
+.order__agree{
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1049.98px) {
+    .order__image {
+        width: 600px;
+        height: 400px;
+        border-radius: 30px;
+        border: 6px solid #683c25;
+        margin-top: 0px;
+    }
+
+    .order__content{
+        justify-content: center;
+    }
+
+    .orders__texts{
+        text-align: center;
+    }
+}
+@media (max-width: 549.98px) {
+    .order__image {
+        display: none;
+    }
+}
+@media (max-width: 479.98px) {
+    .input__control{
+        padding: 16px 42px;
+        width: 280px; 
+        font-size: 14px;
+    }
+    
+}
