@@ -57,7 +57,11 @@
             <p class="order__text">Заповни форму, щоб ми звʼязались з тобою!</p>
           </div>
           <div class="order__content">
-            <form name="order__form" autocomplete="off">
+            <form
+              name="order__form"
+              autocomplete="off"
+              onsubmit="return validateForm()"
+            >
               <div class="input">
                 <label class="input__label hide-element" for="user-name"
                   >Ім'я</label
@@ -68,6 +72,7 @@
                   name="user-name"
                   id="user-name"
                   placeholder="Ім'я"
+                  required
                 />
               </div>
               <div class="input">
@@ -76,10 +81,12 @@
                 >
                 <input
                   class="input__control"
-                  type="text"
+                  type="tel"
                   name="user-tel"
                   id="user-tel"
                   placeholder="Телефон"
+                  pattern="[0-9]{10}"
+                  required
                 />
               </div>
               <div class="input">
@@ -88,11 +95,104 @@
                 >
                 <input
                   class="input__control"
-                  type="text"
+                  type="email"
                   name="user-email"
-                  id="user-enmail"
+                  id="user-email"
                   placeholder="Електронна пошта"
+                  required
                 />
+              </div>
+              <div class="input">
+                <label class="input__label hide-element">Тип картини</label>
+                <div class="radio-group">
+                  <input
+                    type="radio"
+                    name="painting-type"
+                    id="still-life"
+                    value="Натюрморт"
+                    required
+                  />
+                  <label for="still-life">Натюрморт</label>
+                  <input
+                    type="radio"
+                    name="painting-type"
+                    id="portrait"
+                    value="Портрет"
+                    required
+                  />
+                  <label for="portrait">Портрет</label>
+                  <input
+                    type="radio"
+                    name="painting-type"
+                    id="abstraction"
+                    value="Абстракція"
+                    required
+                  />
+                  <label for="abstraction">Абстракція</label>
+                  <input
+                    type="radio"
+                    name="painting-type"
+                    id="landscape"
+                    value="Пейзаж"
+                    required
+                  />
+                  <label for="landscape">Пейзаж</label>
+                </div>
+              </div>
+              <div class="input-painting-quantity">
+                <label class="input__label hide-element" for="painting-quantity"
+                  >Кількість картин</label
+                >
+                <input
+                  class="input__control"
+                  type="number"
+                  name="painting-quantity"
+                  id="painting-quantity"
+                  placeholder="Кількість картин"
+                  min="1"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label class="input__label input-order-date" for="due-date"
+                  >Виберіть дату на яку вам потрібна картина</label
+                >
+                <input
+                  class="input__control"
+                  type="date"
+                  name="due-date"
+                  id="due-date"
+                  placeholder="Виберіть дату"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label class="input__label hide-element" for="file-upload"
+                  >Завантажити файл</label
+                >
+                <div class="file-upload-wrapper">
+                  <input
+                    class="input__control file-upload-input"
+                    type="file"
+                    name="file-upload"
+                    id="file-upload"
+                  />
+                  <label class="file-upload-label" for="file-upload"
+                    >Додайте зображення бажаної картини</label
+                  >
+                </div>
+              </div>
+              <div class="input checkbox-group">
+                <label class="input__label hide-element" for="agreement"
+                  >Погоджуюсь з умовами</label
+                >
+                <input
+                  type="checkbox"
+                  name="agreement"
+                  id="agreement"
+                  required
+                />
+                <label for="agreement">Погоджуюсь з умовами</label>
               </div>
               <button class="button" type="submit">Замовити дзвінок</button>
               <p class="order__agree">
@@ -105,37 +205,51 @@
               alt="Portrait1"
             />
           </div>
-          <div>
-            <script type="text/javascript">
-              var name = window.prompt(
-                "Введіть своє ім'я",
-                'Наприклад - Ольга'
-              );
-              var phone = window.prompt(
-                'Введіть свій номер телефону',
-                'Наприклад - 0503249586'
-              );
-              var email = window.prompt(
-                'Введіть вашу електронну пошту',
-                'Наприклад - olga@gmail.com'
-              );
-              if (name == null) {
-                document.write('Дія була відмінена');
-              } else if (phone == null) {
-                document.write('Дія була відмінена');
-              } else if (email == null) {
-                document.write('Дія була відмінена');
-              } else {
-                document.write(
-                  name +
-                    ', дякуємо за оформлення дзвінку! Очікуйте у найближчі години'
-                );
-              }
-            </script>
-          </div>
         </div>
       </section>
     </main>
+
+    <script>
+      function validateForm() {
+        const phone = document.getElementById('user-tel').value;
+        const email = document.getElementById('user-email').value;
+        const paintingQuantity =
+          document.getElementById('painting-quantity').value;
+        const dueDate = document.getElementById('due-date').value;
+        const agreement = document.getElementById('agreement').checked;
+
+        const phonePattern = /^\d{10}$/;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!phonePattern.test(phone)) {
+          alert('Введіть коректний номер телефону у форматі починаючи з 0');
+          return false;
+        }
+
+        if (!emailPattern.test(email)) {
+          alert('Введіть коректну електронну пошту');
+          return false;
+        }
+
+        if (paintingQuantity < 1) {
+          alert('Введіть коректну кількість картин');
+          return false;
+        }
+
+        if (!dueDate) {
+          alert('Виберіть дату виконання');
+          return false;
+        }
+
+        if (!agreement) {
+          alert('Погодьтесь з умовами');
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__body body-footer">
