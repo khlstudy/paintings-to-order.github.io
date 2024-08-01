@@ -8,207 +8,213 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__container">
-        <a href="#" class="logo gallery-logo">NadiN</a>
-        <nav class="header__menu menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a
-                class="gallery-ref"
-                href="index.html"
-                title="Перейти на головну сторінку"
-                >Головна</a
-              >
-            </li>
-            <li class="menu__item">
-              <a
-                class="gallery-ref"
-                href="gallery.html"
-                title="Переглянути галерею"
-                >Галерея</a
-              >
-            </li>
-            <li class="menu__item">
-              <a
-                class="gallery-ref"
-                href="lessons.html"
-                title="Записатись на заняття"
-                >Заняття</a
-              >
-            </li>
-            <li class="menu__item">
-              <a
-                class="gallery-ref"
-                href="order.html"
-                title="Оформити замовлення"
-                >Замовлення</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main class="page">
-      <section class="page__order">
-        <div class="order__container">
-          <div class="orders__texts">
-            <h2 class="order__title">Оформити замовлення картини</h2>
-            <p class="order__text">Заповни форму, щоб ми звʼязались з тобою!</p>
-          </div>
-          <div class="order__content">
-            <form
-              name="order__form"
-              autocomplete="off"
-              onsubmit="return validateForm()"
-            >
-              <div class="input">
-                <label class="input__label hide-element" for="user-name"
-                  >Ім'я</label
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="#" class="logo gallery-logo">NadiN</a>
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a
+                  class="gallery-ref"
+                  href="index.html"
+                  title="Перейти на головну сторінку"
+                  >Головна</a
                 >
-                <input
-                  class="input__control"
-                  type="text"
-                  name="user-name"
-                  id="user-name"
-                  placeholder="Ім'я"
-                  required
-                />
-              </div>
-              <div class="input">
-                <label class="input__label hide-element" for="user-tel"
-                  >Телефон</label
+              </li>
+              <li class="menu__item">
+                <a
+                  class="gallery-ref"
+                  href="gallery.html"
+                  title="Переглянути галерею"
+                  >Галерея</a
                 >
-                <input
-                  class="input__control"
-                  type="tel"
-                  name="user-tel"
-                  id="user-tel"
-                  placeholder="Телефон"
-                  pattern="[0-9]{10}"
-                  required
-                />
-              </div>
-              <div class="input">
-                <label class="input__label hide-element" for="user-email"
-                  >Електронна пошта</label
+              </li>
+              <li class="menu__item">
+                <a
+                  class="gallery-ref"
+                  href="lessons.html"
+                  title="Записатись на заняття"
+                  >Заняття</a
                 >
-                <input
-                  class="input__control"
-                  type="email"
-                  name="user-email"
-                  id="user-email"
-                  placeholder="Електронна пошта"
-                  required
-                />
-              </div>
-              <div class="input">
-                <label class="input__label hide-element">Тип картини</label>
-                <div class="radio-group">
-                  <input
-                    type="radio"
-                    name="painting-type"
-                    id="still-life"
-                    value="Натюрморт"
-                    required
-                  />
-                  <label for="still-life">Натюрморт</label>
-                  <input
-                    type="radio"
-                    name="painting-type"
-                    id="portrait"
-                    value="Портрет"
-                    required
-                  />
-                  <label for="portrait">Портрет</label>
-                  <input
-                    type="radio"
-                    name="painting-type"
-                    id="abstraction"
-                    value="Абстракція"
-                    required
-                  />
-                  <label for="abstraction">Абстракція</label>
-                  <input
-                    type="radio"
-                    name="painting-type"
-                    id="landscape"
-                    value="Пейзаж"
-                    required
-                  />
-                  <label for="landscape">Пейзаж</label>
-                </div>
-              </div>
-              <div class="input-painting-quantity">
-                <label class="input__label hide-element" for="painting-quantity"
-                  >Кількість картин</label
+              </li>
+              <li class="menu__item">
+                <a
+                  class="gallery-ref"
+                  href="order.html"
+                  title="Оформити замовлення"
+                  >Замовлення</a
                 >
-                <input
-                  class="input__control"
-                  type="number"
-                  name="painting-quantity"
-                  id="painting-quantity"
-                  placeholder="Кількість картин"
-                  min="1"
-                  required
-                />
-              </div>
-              <div class="input">
-                <label class="input__label input-order-date" for="due-date"
-                  >Виберіть дату на яку вам потрібна картина</label
-                >
-                <input
-                  class="input__control"
-                  type="date"
-                  name="due-date"
-                  id="due-date"
-                  placeholder="Виберіть дату"
-                  required
-                />
-              </div>
-              <div class="input">
-                <label class="input__label hide-element" for="file-upload"
-                  >Завантажити файл</label
-                >
-                <div class="file-upload-wrapper">
-                  <input
-                    class="input__control file-upload-input"
-                    type="file"
-                    name="file-upload"
-                    id="file-upload"
-                  />
-                  <label class="file-upload-label" for="file-upload"
-                    >Додайте зображення бажаної картини</label
-                  >
-                </div>
-              </div>
-              <div class="input checkbox-group">
-                <label class="input__label hide-element" for="agreement"
-                  >Погоджуюсь з умовами</label
-                >
-                <input
-                  type="checkbox"
-                  name="agreement"
-                  id="agreement"
-                  required
-                />
-                <label for="agreement">Погоджуюсь з умовами</label>
-              </div>
-              <button class="button" type="submit">Замовити дзвінок</button>
-              <p class="order__agree">
-                Надсилаючи форму, я погоджуюсь на обробку персональних даних
-              </p>
-            </form>
-            <img
-              class="order__image"
-              src="./images/portrait1.jpg"
-              alt="Portrait1"
-            />
-          </div>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </section>
-    </main>
-
+      </header>
+      <main class="page">
+        <section class="page__order">
+          <div class="order__container">
+            <div class="orders__texts">
+              <h2 class="order__title">Оформити замовлення картини</h2>
+              <p class="order__text">
+                Заповни форму, щоб ми звʼязались з тобою!
+              </p>
+            </div>
+            <div class="order__content">
+              <form
+                name="order__form"
+                autocomplete="off"
+                onsubmit="return validateForm()"
+              >
+                <div class="input">
+                  <label class="input__label hide-element" for="user-name"
+                    >Ім'я</label
+                  >
+                  <input
+                    class="input__control"
+                    type="text"
+                    name="user-name"
+                    id="user-name"
+                    placeholder="Ім'я"
+                    required
+                  />
+                </div>
+                <div class="input">
+                  <label class="input__label hide-element" for="user-tel"
+                    >Телефон</label
+                  >
+                  <input
+                    class="input__control"
+                    type="tel"
+                    name="user-tel"
+                    id="user-tel"
+                    placeholder="Телефон (0...)"
+                    pattern="[0-9]{10}"
+                    required
+                  />
+                </div>
+                <div class="input">
+                  <label class="input__label hide-element" for="user-email"
+                    >Електронна пошта</label
+                  >
+                  <input
+                    class="input__control"
+                    type="email"
+                    name="user-email"
+                    id="user-email"
+                    placeholder="Електронна пошта"
+                    required
+                  />
+                </div>
+                <div class="input">
+                  <label class="input__label hide-element">Тип картини</label>
+                  <div class="radio-group">
+                    <input
+                      type="radio"
+                      name="painting-type"
+                      id="still-life"
+                      value="Натюрморт"
+                      required
+                    />
+                    <label class="painting__type" for="still-life"
+                      >Натюрморт</label
+                    >
+                    <input
+                      type="radio"
+                      name="painting-type"
+                      id="portrait"
+                      value="Портрет"
+                      required
+                    />
+                    <label class="painting__type" for="portrait">Портрет</label>
+                    <input
+                      type="radio"
+                      name="painting-type"
+                      id="abstraction"
+                      value="Абстракція"
+                      required
+                    />
+                    <label class="painting__type" for="abstraction"
+                      >Абстракція</label
+                    >
+                    <input
+                      type="radio"
+                      name="painting-type"
+                      id="landscape"
+                      value="Пейзаж"
+                      required
+                    />
+                    <label class="painting__type" for="landscape">Пейзаж</label>
+                  </div>
+                </div>
+                <div class="input-painting-quantity">
+                  <label
+                    class="input__label hide-element"
+                    for="painting-quantity"
+                    >Кількість картин</label
+                  >
+                  <input
+                    class="input__control"
+                    type="number"
+                    name="painting-quantity"
+                    id="painting-quantity"
+                    placeholder="Кількість картин"
+                    min="1"
+                    required
+                  />
+                </div>
+                <div class="input">
+                  <label class="input__label input-order-date" for="due-date"
+                    >Виберіть дату на яку потрібна картина</label
+                  >
+                  <input
+                    class="input__control"
+                    type="date"
+                    name="due-date"
+                    id="due-date"
+                    placeholder="Виберіть дату"
+                    required
+                  />
+                </div>
+                <div class="input">
+                  <label class="input__label hide-element" for="file-upload"
+                    >Завантажити файл</label
+                  >
+                  <div class="file-upload-wrapper">
+                    <input
+                      class="input__control file-upload-input"
+                      type="file"
+                      name="file-upload"
+                      id="file-upload"
+                    />
+                    <label class="file-upload-label" for="file-upload"
+                      >Додайте зображення бажаної картини</label
+                    >
+                  </div>
+                </div>
+                <div class="input checkbox-group">
+                  <label class="input__label hide-element" for="agreement"
+                    >Погоджуюсь з умовами</label
+                  >
+                  <input
+                    type="checkbox"
+                    name="agreement"
+                    id="agreement"
+                    required
+                  />
+                  <label for="agreement">Погоджуюсь з умовами</label>
+                </div>
+                <button class="button" type="submit">Замовити дзвінок</button>
+              </form>
+              <img
+                class="order__image"
+                src="./images/portrait1.jpg"
+                alt="Portrait1"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
     <script>
       function validateForm() {
         const phone = document.getElementById('user-tel').value;
